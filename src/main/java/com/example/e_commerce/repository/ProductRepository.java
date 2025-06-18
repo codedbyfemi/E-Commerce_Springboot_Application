@@ -1,5 +1,6 @@
 package com.example.e_commerce.repository;
 
+import com.example.e_commerce.model.Category;
 import com.example.e_commerce.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -10,13 +11,12 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 
     List<Product> findByBrand(String brand);
 
-    List<Product> findByCategoryName(String category);
+    List<Product> findByCategory(Category category);
 
-    List<Product> findByBrandAndName(String brand, String name);
+    Product findByBrandAndName(String brand, String name);
 
-    List<Product> findByCategoryNameAndName(String category, String name);
+    Product findByCategoryAndName(Category category, String name);
 
-    List<Product> findByBrandAndCategoryName(String brand, String category);
+    List<Product> findByBrandAndCategory(String brand, Category category);
 
-    Long countByBrandAndName(String brand, String name);
 }
