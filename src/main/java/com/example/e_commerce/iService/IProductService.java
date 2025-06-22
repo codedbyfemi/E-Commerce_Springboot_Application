@@ -15,7 +15,7 @@ public interface IProductService {
     ProductDTO getProductByBrandAndName(String brand, String name);
     List<ProductDTO> getProductByBrandAndCategory(String brand, String category);
     List<ProductDTO> getAllProducts();
-    Long countProductsByBrane(String brand);
+    Long countProductsByBrand(String brand);
     Long countProductsByCategory(String category);
     ProductDTO updateProduct(ProductDTO product, Long id);
     void deleteProduct(String productName);

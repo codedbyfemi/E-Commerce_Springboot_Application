@@ -85,7 +85,7 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public Long countProductsByBrane(String brand) {
+    public Long countProductsByBrand(String brand) {
         Long count = 0L;
         List<Product> products = productRepository.findByBrand(brand);
         for(Product product : products){
